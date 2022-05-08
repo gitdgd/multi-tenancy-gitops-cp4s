@@ -14,7 +14,7 @@ spec:
       prune: true
       selfHeal: true
   destination:
-    namespace: tools
+    namespace: cp4s
     server: https://kubernetes.default.svc
   project: services
   source:
@@ -29,6 +29,8 @@ spec:
         value: "true"
       - name: spec.basicDeploymentConfiguration.adminUser
         value: adminUser
+      - name: spec.basicDeploymentConfiguration.domain
+        value: ''
       - name: spec.basicDeploymentConfiguration.storageClass
         value: managed-nfs-storage
       - name: spec.extendedDeploymentConfiguration.airgapInstall
